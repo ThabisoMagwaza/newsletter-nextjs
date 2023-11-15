@@ -1,7 +1,6 @@
-'use client';
+"use client";
 
-import { createGlobalStyle } from 'styled-components';
-
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 
@@ -86,8 +85,16 @@ export default createGlobalStyle`
   }
 
   html,
-  body {
+  body,
+  main {
     height: 100%;
+  }
+
+  html {
+    --color-dark-slate-grey: hsl(234, 29%, 20%);
+    --color-charcoal: hsl(235, 18%, 26%);
+    --color-grey: hsl(231, 7%, 60%);
+    --color-white: hsl(0, 0%, 100%);
   }
 
   body {
