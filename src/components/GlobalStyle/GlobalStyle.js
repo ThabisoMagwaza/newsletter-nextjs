@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 
@@ -84,16 +84,16 @@ export default createGlobalStyle`
     box-sizing: inherit;
   }
 
-  html,
+  /* html,
   body,
   main {
     height: 100%;
-  }
+  } */
 
   html {
     --color-dark-slate-grey: hsl(234, 29%, 20%);
     --color-charcoal: hsl(235, 18%, 26%);
-    --color-grey: hsl(231, 7%, 60%);
+    --color-grey: hsl(231, 7%, 70%);
     --color-white: hsl(0, 0%, 100%);
   }
 
@@ -101,5 +101,7 @@ export default createGlobalStyle`
     line-height: 1.5;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+
+    color: var(--color-dark-slate-grey);
   }
 `;
