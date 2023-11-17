@@ -3,6 +3,9 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import Heading from '../Heading';
+import FeatureList from '../FeatureList';
+import Stack from '../Stack';
+import SignupForm from '../SignupForm';
 
 function Newsletter() {
   return (
@@ -18,18 +21,23 @@ function Newsletter() {
 
       <Heading>Stay updated!</Heading>
 
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <SubHeading>
+        Join 60,000+ product managers receiving monthly updates on:
+      </SubHeading>
 
-      <ul>
-        <li>Product discovery and building what matters</li>
-        <li>Measuring to ensure updates are a success</li>
-        <li>And much more!</li>
-      </ul>
+      <Stack gap="42px">
+        <FeatureList>
+          <FeatureList.Feature>
+            Product discovery and building what matters
+          </FeatureList.Feature>
+          <FeatureList.Feature>
+            Measuring to ensure updates are a success
+          </FeatureList.Feature>
+          <FeatureList.Feature>And much more!</FeatureList.Feature>
+        </FeatureList>
 
-      <label htmlFor="email">Email Address:</label>
-      <input id="email" type="email" name="email" />
-
-      <button>Subscribe to monthly newsletter</button>
+        <SignupForm />
+      </Stack>
     </Wrapper>
   );
 }
@@ -37,8 +45,6 @@ function Newsletter() {
 const Wrapper = styled.div`
   height: 100%;
   padding: 24px;
-
-  border: 1px dotted;
 `;
 
 const ImageStyled = styled(Image)`
@@ -50,6 +56,11 @@ const ImageStyled = styled(Image)`
 const ImageWrapper = styled.div`
   margin: -24px;
   margin-bottom: 42px;
+`;
+
+const SubHeading = styled.p`
+  margin-top: 24px;
+  margin-bottom: 32px;
 `;
 
 export default Newsletter;
