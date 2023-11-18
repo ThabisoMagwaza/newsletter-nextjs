@@ -20,7 +20,7 @@ const Label = styled.label`
 
 const Input = styled.input`
   height: 54px;
-  font-size: 12px;
+  font-size: 16px;
 
   padding: 20px 24px;
   border-radius: 8px;
