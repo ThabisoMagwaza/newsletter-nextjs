@@ -9,7 +9,7 @@ import SignupForm from '../SignupForm';
 
 function Newsletter() {
   return (
-    <Wrapper>
+    <>
       <ImageWrapper>
         <ImageStyled
           width={375}
@@ -38,14 +38,9 @@ function Newsletter() {
 
         <SignupForm />
       </Stack>
-    </Wrapper>
+    </>
   );
 }
-
-const Wrapper = styled.div`
-  height: 100%;
-  padding: 24px;
-`;
 
 const ImageStyled = styled(Image)`
   display: block;

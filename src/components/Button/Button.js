@@ -16,8 +16,8 @@ const Wrapper = styled.button`
   outline-offset: 3px;
 `;
 
-function Button({ children }) {
-  return <Wrapper>{children}</Wrapper>;
+function Button({ children, ...delegated }) {
+  return <Wrapper {...delegated}>{children}</Wrapper>;
 }
 
 export default Button;
