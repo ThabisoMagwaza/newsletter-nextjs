@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.button`
   border: none;
-  background: ${COLORS.DarkSlateGrey};
+  background: var(--background);
   color: ${COLORS.White};
   font-size: 14px;
   font-weight: 700;
@@ -16,8 +16,18 @@ const Wrapper = styled.button`
   outline-offset: 3px;
 `;
 
-function Button({ children, ...delegated }) {
-  return <Wrapper {...delegated}>{children}</Wrapper>;
+function Button({ children, disabled = false, ...delegated }) {
+  return (
+    <Wrapper
+      style={{
+        '--background': (disabled && COLORS.Charcoal) || COLORS.DarkSlateGrey,
+      }}
+      disabled={disabled}
+      {...delegated}
+    >
+      {children}
+    </Wrapper>
+  );
 }
 
 export default Button;

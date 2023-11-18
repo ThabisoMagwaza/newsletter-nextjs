@@ -36,9 +36,12 @@ const Input = styled.input`
 function SignupForm() {
   const router = useRouter();
   const [email, setEmail] = React.useState('');
+  const [submitting, setSubmitting] = React.useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    setSubmitting(true);
 
     const params = new URLSearchParams({
       email,
@@ -61,7 +64,7 @@ function SignupForm() {
         />
       </Stack>
 
-      <Button>Subscribe to monthly newsletter</Button>
+      <Button disabled={submitting}>Subscribe to monthly newsletter</Button>
     </Form>
   );
 }
