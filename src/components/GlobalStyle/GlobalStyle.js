@@ -84,11 +84,11 @@ export default createGlobalStyle`
     box-sizing: inherit;
   }
 
-  /* html,
+  html,
   body,
   main {
     height: 100%;
-  } */
+  }
 
   html {
     --color-dark-slate-grey: hsl(234, 29%, 20%);

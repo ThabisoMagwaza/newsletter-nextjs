@@ -1,5 +1,7 @@
 'use client';
+import React from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/navigation';
 
 import { COLORS } from '@/lib/constants';
 import Stack from '../Stack';
@@ -32,8 +34,20 @@ const Input = styled.input`
 `;
 
 function SignupForm() {
+  const router = useRouter();
+  const [email, setEmail] = React.useState('');
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const params = new URLSearchParams({
+      email,
+    }).toString();
+
+    router.push(`/success?${params}`);
+  };
   return (
-    <Form>
+    <Form onSubmit={onSubmit}>
       <Stack gap="14px">
         <Label htmlFor="email">Email Address:</Label>
         <Input
@@ -41,6 +55,9 @@ function SignupForm() {
           type="email"
           name="email"
           placeholder="email@company.com"
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          value={email}
         />
       </Stack>
 
