@@ -12,9 +12,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 145px 24px 40px 24px;
-
-  border: 1px dotted;
+  padding: 12vh 24px 40px 24px;
 `;
 
 const ImageStyled = styled(Image)`
