@@ -103,5 +103,9 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
 
     color: var(--color-dark-slate-grey);
+    background: var(--color-charcoal);
+
+    display: grid;
+    place-items: center;
   }
 `;

@@ -4,3 +4,13 @@ export const COLORS = {
   Grey: 'var(--color-grey)',
   White: 'var(--color-white)',
 };
+
+const SIZES = {
+  tablet: 500,
+  desktop: 1440,
+};
+
+export const QUERIES = {
+  tabletAndUp: `@media (min-width: ${SIZES.tablet / 16}rem)`,
+  desktopAndUp: `@medial (min-with: ${SIZES.desktop / 16}rem)`,
+};

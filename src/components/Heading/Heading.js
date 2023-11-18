@@ -1,18 +1,18 @@
 'use client';
+import { QUERIES } from '@/lib/constants';
 import styled from 'styled-components';
 
-const sizes = {
-  1: 34,
-  2: 28,
-};
-
 const HeadingStyled = styled.h1`
-  font-size: ${({ size }) => size / 16}rem;
+  font-size: ${32 / 16}rem;
   font-weight: 700;
+
+  ${QUERIES.tabletAndUp} {
+    font-size: ${48 / 16}rem;
+  }
 `;
 
 function Heading({ children, level = 1 }) {
-  return <HeadingStyled size={sizes[level]}>{children}</HeadingStyled>;
+  return <HeadingStyled>{children}</HeadingStyled>;
 }
 
 export default Heading;
