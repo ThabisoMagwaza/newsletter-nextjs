@@ -14,6 +14,15 @@ const Wrapper = styled.button`
   padding: 20px;
 
   outline-offset: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(
+      to left,
+      hsl(15deg, 100%, 61%),
+      hsl(354deg, 100%, 67%)
+    );
+  }
 `;
 
 function Button({ children, disabled = false, ...delegated }) {
