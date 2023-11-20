@@ -84,6 +84,7 @@ const Form = styled.form`
 const Label = styled.label``;
 
 const Input = styled.input`
+  outline: none;
   color: ${({ valid, touched }) =>
     (!valid && touched && COLORS.Tomato) || 'inherit'};
 
@@ -103,6 +104,11 @@ const Input = styled.input`
   &::placeholder {
     font-weight: 700;
     color: ${COLORS.Grey};
+  }
+
+  &:focus {
+    border: 1px solid ${COLORS.DarkSlateGrey};
+    color: ${COLORS.DarkSlateGrey};
   }
 `;
 
