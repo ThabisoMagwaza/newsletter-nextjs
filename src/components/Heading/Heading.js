@@ -6,6 +6,8 @@ const HeadingStyled = styled.h1`
   font-size: ${32 / 16}rem;
   font-weight: 700;
 
+  line-height: 1;
+
   ${QUERIES.tabletAndUp} {
     font-size: ${48 / 16}rem;
   }
