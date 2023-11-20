@@ -95,6 +95,7 @@ export default createGlobalStyle`
     --color-charcoal: hsl(235, 18%, 26%);
     --color-grey: hsl(231, 7%, 70%);
     --color-white: hsl(0, 0%, 100%);
+    --color-tomato: hsl(4, 100%, 67%);
   }
 
   body {

@@ -3,6 +3,7 @@ export const COLORS = {
   Charcoal: 'var(--color-charcoal)',
   Grey: 'var(--color-grey)',
   White: 'var(--color-white)',
+  Tomato: 'var(--color-tomato)',
 };
 
 const SIZES = {
